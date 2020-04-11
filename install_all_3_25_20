@@ -1,0 +1,185 @@
+#!/bin/bash
+
+#Install Script
+#David Rhoads
+#November 15, 2019
+echo "This script installs all necessary components of my linux system. Note: it was written on PopOS 19.10 in November 2019, but should work on any Ubuntu bases system"
+
+#Install Flatpak
+sudo apt install flatpak &&
+
+#Install Snap
+sudo apt install snapd &&
+
+#Install gphotos-sync
+snap install gphotos-sync
+#Install Powershell
+sudo snap install powershell --classic &&
+
+#Install Visual Studio Code
+sudo snap install code --classic &&
+
+#Install git
+sudo apt install git &&
+
+#Download Plexamp AppImage
+#wget https://plexamp.plex.tv/plexamp.plex.tv/plexamp-1.1.0-x86_64.AppImage &&
+#Make it Executable
+#chmod +x plexamp-1.1.0-x86_64.AppImage &&
+
+#Install Shortwave
+flatpak install https://flathub.org/beta-repo/appstream/de.haeckerfelix.Shortwave.flatpakref &&
+
+#Install Riot
+flatpak install flathub im.riot.Riot
+
+
+#Install Syncthing
+	# Add the release PGP keys:
+	curl -s https://syncthing.net/release-key.txt | sudo apt-key add - &&
+	# Add the "stable" channel to your APT sources:
+	echo "deb https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list &&
+	# Update and install syncthing:
+	sudo apt-get update &&
+	sudo apt-get install syncthing &&
+
+#Install Gnome Tweaks
+#sudo apt install gnome-tweaks &&
+#Install Emby
+wget https://github.com/MediaBrowser/Emby.Releases/releases/download/4.2.1.0/emby-server-deb_4.2.1.0_amd64.deb &&
+sudo dpkg -i emby-server-deb_4.2.1.0_amd64.deb &&
+
+#Install Plex
+wget https://downloads.plex.tv/plex-media-server-new/1.18.2.2029-36236cc4c/debian/plexmediaserver_1.18.2.2029-36236cc4c_amd64.deb &&
+sudo dpkg -i plexmediaserver_1.18.2.2029-36236cc4c_amd64.deb &&
+
+#Install KeepassXC
+sudo add-apt-repository ppa:phoerious/keepassxc &&
+sudo apt update &&
+sudo apt install keepassxc &&
+
+#Install Darktable
+sudo apt install darktable &&
+
+#Install Krita
+sudo apt install krita &&
+
+#Install Syncthing
+sudo apt install syncthing-gtk &&
+
+#Python Modules
+
+#Install Pip
+sudo apt install python3-pip
+
+#Install Pandas
+sudo apt install python3-pandas
+
+#Install neofetch
+sudo apt install neofetch &&
+
+#Install Howdy
+#echo "Install Howdy Face Unlock. 
+#On Plasma you will have to set the no confirmation setting to true with 'sudo howdy config' and then 'no-confirmation=true'. 
+
+#Press any key to continue."
+#read VARHOWDY
+#sudo add-apt-repository ppa:boltgolt/howdy && sudo apt update && sudo apt install howdy
+
+
+#Install htop
+sudo apt install htop &&
+
+#Install Brave
+sudo apt install apt-transport-https curl && curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add - &&
+
+echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list &&
+
+sudo apt update &&
+
+sudo apt install brave-browser &&
+
+#Install appimage launcher
+sudo add-apt-repository ppa:appimagelauncher-team/stable &&
+sudo apt update &&
+sudo apt install appimagelauncher
+
+#Ice SSB
+#wget https://launchpad.net/~peppermintos/+archive/ubuntu/ice-dev/+build/17530522/+files/ice_6.0.6_all.deb sudo dpkg -i ice_6.0.6_all.deb &&
+
+#Install LibreOffice
+sudo apt install libreoffice &&
+
+#Install Ubuntu Studio Installer
+sudo apt install ubuntustudio-installer &&
+
+#Install MS Fonts
+sudo apt install ttf-mscorefonts-installer &&
+
+#Install Citrix Workspace App
+wget https://downloads.citrix.com/16728/icaclient_19.10.0.15_amd64.deb?__gda__=1573936634_7b360a09caaf12f1aa150b17bd014700 && sudo apt install -y icaclient_19.10.0.15_amd64.deb?__gda__=1573936634_7b360a09caaf12f1aa150b17bd014700 &&
+
+#Install Spotify
+curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add - &&
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo apt-get update && sudo apt-get install spotify-client
+
+#Desktops
+#Install Mate Desktop
+#echo "Do you want to install Mate (y/n)"
+#read varmate
+#if [varmate == y]
+	#then
+	#sudo apt install mate-desktop-environment  
+	#fi
+#&&
+
+#Install Plasma Desktop
+#echo "Do you want to install plasma (y/n)"
+#read varplasma
+#if [varplasma == y]
+#	then
+#	sudo add-apt-repository ppa:kubuntu-ppa/backports
+#	sudo apt update
+#	sudo apt install plasma-desktop
+##	fi
+&&
+#Install Lutris
+sudo add-apt-repository ppa:lutris-team/lutris &&
+sudo apt update &&
+sudo apt install lutris &&
+
+#Install Steam
+flatpak install flathub com.valvesoftware.Steam &&
+
+#Install vlc
+sudo apt install vlc &&
+
+#Install Gestures support
+#sudo apt install python3 python3-setuptools xdotool python3-gi libinput-tools python-gobject &&
+#sudo gpasswd -a $USER input &&
+#git clone https://github.com/bulletmark/libinput-gestures.git &&
+#cd libinput-gestures&&
+#sudo make install && #(or sudo ./libinput-gestures-setup install)
+#git clone https://gitlab.com/cunidev/gestures &&
+#d gestures &&
+#sudo python3 setup.py install &&
+
+#Install Zorin OS theming
+echo "Installing Zorin OS theming, you will need to install the following gnome shell extensions:
+User Themes, Tray Icons, Dash to Panel, and Arc Menu. Press [enter] to continue"
+#read varname
+#sudo apt install gettext libgettextpo-dev gnome-shell-extensions gnome-tweak-tool gnome-menus gir1.2-gmenu-3.0 &&
+#git clone https://github.com/ZorinOS/zorin-desktop-themes.git &&
+#git clone https://github.com/ZorinOS/zorin-icon-themes.git &&
+#sudo cp -r zorin-desktop-themes/Z* /usr/share/themes &&
+#sudo cp -r zorin-icon-themes/Z* /usr/share/icons &&
+
+#Install youtube-dl
+sudo snap install youtube-dl &&
+
+#Update all Packages
+sudo apt update &&
+
+#Upgrade all packages
+sudo apt upgrade
