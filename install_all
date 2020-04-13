@@ -73,7 +73,7 @@ sudo apt install syncthing-gtk &&
 sudo apt install python3-pip
 
 #Install Pandas
-sudo apt install python3-pandas
+#sudo apt install python3-pandas
 
 #Install neofetch
 sudo apt install neofetch &&
@@ -100,15 +100,15 @@ sudo apt update &&
 sudo apt install brave-browser &&
 
 #Install appimage launcher
-sudo add-apt-repository ppa:appimagelauncher-team/stable &&
-sudo apt update &&
-sudo apt install appimagelauncher
+#sudo add-apt-repository ppa:appimagelauncher-team/stable &&
+#sudo apt update &&
+#sudo apt install appimagelauncher
 
 #Ice SSB
 #wget https://launchpad.net/~peppermintos/+archive/ubuntu/ice-dev/+build/17530522/+files/ice_6.0.6_all.deb sudo dpkg -i ice_6.0.6_all.deb &&
 
 #Install LibreOffice
-sudo apt install libreoffice &&
+#sudo apt install libreoffice &&
 
 #Install Ubuntu Studio Installer
 sudo apt install ubuntustudio-installer &&
@@ -117,12 +117,12 @@ sudo apt install ubuntustudio-installer &&
 sudo apt install ttf-mscorefonts-installer &&
 
 #Install Citrix Workspace App
-wget https://downloads.citrix.com/16728/icaclient_19.10.0.15_amd64.deb?__gda__=1573936634_7b360a09caaf12f1aa150b17bd014700 && sudo apt install -y icaclient_19.10.0.15_amd64.deb?__gda__=1573936634_7b360a09caaf12f1aa150b17bd014700 &&
-
+wget https:////downloads.citrix.com/16914/icaclient_19.12.0.19_amd64.deb?__gda__=1586651605_19b3f86d148749207ae38e895ed22509
+           
 #Install Spotify
 curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add - &&
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-sudo apt-get update && sudo apt-get install spotify-client
+sudo apt-get update && sudo apt-get install -y spotify-client
 
 #Desktops
 #Install Mate Desktop
