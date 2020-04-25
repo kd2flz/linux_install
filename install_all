@@ -28,10 +28,15 @@ sudo apt install git &&
 #chmod +x plexamp-1.1.0-x86_64.AppImage &&
 
 #Install Shortwave
-flatpak install https://flathub.org/beta-repo/appstream/de.haeckerfelix.Shortwave.flatpakref &&
+flatpak install flathub de.haeckerfelix.Shortwave
 
 #Install Riot
 flatpak install flathub im.riot.Riot
+
+#Install Planner
+flatpak install flathub com.github.alainm23.planner &&
+
+
 
 
 #Install Syncthing
