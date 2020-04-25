@@ -72,83 +72,34 @@ sudo apt install krita &&
 #Install Syncthing
 sudo apt install syncthing-gtk &&
 
-#Python Modules
-
-#Install Pip
-sudo apt install python3-pip
-
-#Install Pandas
-#sudo apt install python3-pandas
-
 #Install neofetch
 sudo apt install neofetch &&
-
-#Install Howdy
-#echo "Install Howdy Face Unlock. 
-#On Plasma you will have to set the no confirmation setting to true with 'sudo howdy config' and then 'no-confirmation=true'. 
-
-#Press any key to continue."
-#read VARHOWDY
-#sudo add-apt-repository ppa:boltgolt/howdy && sudo apt update && sudo apt install howdy
-
 
 #Install htop
 sudo apt install htop &&
 
 #Install Brave
-sudo apt install apt-transport-https curl && curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add - &&
+sudo apt install apt-transport-https curl
 
-echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list &&
+curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
+
+echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 
 sudo apt update &&
 
 sudo apt install brave-browser &&
-
-#Install appimage launcher
-#sudo add-apt-repository ppa:appimagelauncher-team/stable &&
-#sudo apt update &&
-#sudo apt install appimagelauncher
-
-#Ice SSB
-#wget https://launchpad.net/~peppermintos/+archive/ubuntu/ice-dev/+build/17530522/+files/ice_6.0.6_all.deb sudo dpkg -i ice_6.0.6_all.deb &&
-
-#Install LibreOffice
-#sudo apt install libreoffice &&
 
 #Install Ubuntu Studio Installer
 sudo apt install ubuntustudio-installer &&
 
 #Install MS Fonts
 sudo apt install ttf-mscorefonts-installer &&
-
-#Install Citrix Workspace App
-wget https:////downloads.citrix.com/16914/icaclient_19.12.0.19_amd64.deb?__gda__=1586651605_19b3f86d148749207ae38e895ed22509
-           
+   
 #Install Spotify
 curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add - &&
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-sudo apt-get update && sudo apt-get install -y spotify-client
+sudo apt-get update && sudo apt-get install -y spotify-client &&
 
-#Desktops
-#Install Mate Desktop
-#echo "Do you want to install Mate (y/n)"
-#read varmate
-#if [varmate == y]
-	#then
-	#sudo apt install mate-desktop-environment  
-	#fi
-#&&
-
-#Install Plasma Desktop
-#echo "Do you want to install plasma (y/n)"
-#read varplasma
-#if [varplasma == y]
-#	then
-#	sudo add-apt-repository ppa:kubuntu-ppa/backports
-#	sudo apt update
-#	sudo apt install plasma-desktop
-##	fi
-&&
 #Install Lutris
 sudo add-apt-repository ppa:lutris-team/lutris &&
 sudo apt update &&
@@ -160,19 +111,12 @@ flatpak install flathub com.valvesoftware.Steam &&
 #Install vlc
 sudo apt install vlc &&
 
-#Install Gestures support
-#sudo apt install python3 python3-setuptools xdotool python3-gi libinput-tools python-gobject &&
-#sudo gpasswd -a $USER input &&
-#git clone https://github.com/bulletmark/libinput-gestures.git &&
-#cd libinput-gestures&&
-#sudo make install && #(or sudo ./libinput-gestures-setup install)
-#git clone https://gitlab.com/cunidev/gestures &&
-#d gestures &&
-#sudo python3 setup.py install &&
+#Install youtube-dl
+sudo snap install youtube-dl &&
 
-#Install Zorin OS theming
-echo "Installing Zorin OS theming, you will need to install the following gnome shell extensions:
-User Themes, Tray Icons, Dash to Panel, and Arc Menu. Press [enter] to continue"
+#Uncomment below to install Zorin OS theming
+#echo "Installing Zorin OS theming, you will need to install the following gnome shell extensions:
+#User Themes, Tray Icons, Dash to Panel, and Arc Menu. Press [enter] to continue"
 #read varname
 #sudo apt install gettext libgettextpo-dev gnome-shell-extensions gnome-tweak-tool gnome-menus gir1.2-gmenu-3.0 &&
 #git clone https://github.com/ZorinOS/zorin-desktop-themes.git &&
@@ -180,8 +124,7 @@ User Themes, Tray Icons, Dash to Panel, and Arc Menu. Press [enter] to continue"
 #sudo cp -r zorin-desktop-themes/Z* /usr/share/themes &&
 #sudo cp -r zorin-icon-themes/Z* /usr/share/icons &&
 
-#Install youtube-dl
-sudo snap install youtube-dl &&
+
 
 #Update all Packages
 sudo apt update &&
