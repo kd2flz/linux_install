@@ -36,6 +36,9 @@ flatpak install flathub im.riot.Riot
 #Install Planner
 flatpak install flathub com.github.alainm23.planner &&
 
+#Install Feeds
+flatpak install flathub org.gabmus.gfeeds
+
 
 
 
