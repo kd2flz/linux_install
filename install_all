@@ -37,7 +37,7 @@ sudo apt install git &&
 flatpak install flathub de.haeckerfelix.Shortwave
 
 #Install Riot
-flatpak install flathub im.riot.Riot
+snap install riot-web &&
 
 #Install Planner
 flatpak install flathub com.github.alainm23.planner &&
@@ -51,7 +51,8 @@ flatpak install org.gnome.Podcasts
 #Install Geary
 flatpak install org.gnome.Geary
 
-
+#Install Lollypop
+flatpak install org.gnome.Lollypop
 #Install Syncthing
 	# Add the release PGP keys:
 	curl -s https://syncthing.	net/release-key.txt | sudo apt-key add - &&
@@ -62,14 +63,17 @@ flatpak install org.gnome.Geary
 	sudo apt-get install syncthing &&
 
 #Install Gnome Tweaks
+sudo apt-get install chrome-gnome-shell &&
 sudo apt install gnome-tweaks &&
 #Install Emby
 wget https://github.com/MediaBrowser/Emby.Releases/releases/download/4.2.1.0/emby-server-deb_4.2.1.0_amd64.deb &&
 sudo dpkg -i emby-server-deb_4.2.1.0_amd64.deb &&
 
 #Install Plex
-wget https://downloads.plex.tv/plex-media-server-new/1.18.2.2029-36236cc4c/debian/plexmediaserver_1.18.2.2029-36236cc4c_amd64.deb &&
-sudo dpkg -i plexmediaserver_1.18.2.2029-36236cc4c_amd64.deb &&
+snap install plexmediaserver &&
+
+#Install Joplin
+wget -O - https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_install_and_update.sh | bash
 
 #Install KeepassXC
 sudo add-apt-repository ppa:phoerious/keepassxc &&
