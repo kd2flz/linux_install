@@ -5,14 +5,20 @@
 #November 15, 2019
 echo "This script installs all necessary components of my linux system. Note: it was written on PopOS 19.10 in November 2019, but should work on any Ubuntu bases system"
 
-#Install Flatpak
-sudo apt install flatpak &&
 
+
+#Configure Flatpaks
+#sudo add-apt-repository ppa:alexlarsson/flatpak &&
+sudo apt update &&
+sudo apt install flatpak
 #Install Snap
 sudo apt install snapd &&
+sudo apt install gnome-software-plugin-flatpak &&
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo &&
+
 
 #Install gphotos-sync
-snap install gphotos-sync
+sudo snap install gphotos-sync
 #Install Powershell
 sudo snap install powershell --classic &&
 
@@ -39,12 +45,16 @@ flatpak install flathub com.github.alainm23.planner &&
 #Install Feeds
 flatpak install flathub org.gabmus.gfeeds
 
+#Install Gnome Podcasts
+flatpak install org.gnome.Podcasts
 
+#Install Geary
+flatpak install org.gnome.Geary
 
 
 #Install Syncthing
 	# Add the release PGP keys:
-	curl -s https://syncthing.net/release-key.txt | sudo apt-key add - &&
+	curl -s https://syncthing.	net/release-key.txt | sudo apt-key add - &&
 	# Add the "stable" channel to your APT sources:
 	echo "deb https://apt.syncthing.net/ syncthing stable" | sudo tee /etc/apt/sources.list.d/syncthing.list &&
 	# Update and install syncthing:
@@ -52,7 +62,7 @@ flatpak install flathub org.gabmus.gfeeds
 	sudo apt-get install syncthing &&
 
 #Install Gnome Tweaks
-#sudo apt install gnome-tweaks &&
+sudo apt install gnome-tweaks &&
 #Install Emby
 wget https://github.com/MediaBrowser/Emby.Releases/releases/download/4.2.1.0/emby-server-deb_4.2.1.0_amd64.deb &&
 sudo dpkg -i emby-server-deb_4.2.1.0_amd64.deb &&
@@ -96,8 +106,8 @@ sudo apt install brave-browser &&
 sudo apt install ubuntustudio-installer &&
 
 #Install MS Fonts
-sudo apt install ttf-mscorefonts-installer &&
-   
+sudo apt install -y ttf-mscorefonts-installer &&
+
 #Install Spotify
 curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add - &&
 echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
