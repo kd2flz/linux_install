@@ -16,43 +16,10 @@ sudo apt install snapd &&
 sudo apt install gnome-software-plugin-flatpak &&
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo &&
 
-
-#Install gphotos-sync
-sudo snap install gphotos-sync
-#Install Powershell
-sudo snap install powershell --classic &&
-
-#Install Visual Studio Code
-sudo snap install code --classic &&
-
 #Install git
 sudo apt install git &&
 
-#Download Plexamp AppImage
-#wget https://plexamp.plex.tv/plexamp.plex.tv/plexamp-1.1.0-x86_64.AppImage &&
-#Make it Executable
-#chmod +x plexamp-1.1.0-x86_64.AppImage &&
 
-#Install Shortwave
-flatpak install flathub de.haeckerfelix.Shortwave
-
-#Install Riot
-snap install riot-web &&
-
-#Install Planner
-flatpak install flathub com.github.alainm23.planner &&
-
-#Install Feeds
-flatpak install flathub org.gabmus.gfeeds
-
-#Install Gnome Podcasts
-flatpak install org.gnome.Podcasts
-
-#Install Geary
-flatpak install org.gnome.Geary
-
-#Install Lollypop
-flatpak install org.gnome.Lollypop
 #Install Syncthing
 	# Add the release PGP keys:
 	curl -s https://syncthing.	net/release-key.txt | sudo apt-key add - &&
@@ -73,27 +40,10 @@ sudo dpkg -i emby-server-deb_4.2.1.0_amd64.deb &&
 snap install plexmediaserver &&
 
 #Install Joplin
-wget -O - https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_install_and_update.sh | bash
-
-#Install KeepassXC
-sudo add-apt-repository ppa:phoerious/keepassxc &&
-sudo apt update &&
-sudo apt install keepassxc &&
-
-#Install Darktable
-sudo apt install darktable &&
-
-#Install Krita
-sudo apt install krita &&
-
-#Install Syncthing
-sudo apt install syncthing-gtk &&
+wget -O - https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_install_and_update.sh | bash &&
 
 #Install neofetch
 sudo apt install neofetch &&
-
-#Install htop
-sudo apt install htop &&
 
 #Install Brave
 sudo apt install apt-transport-https curl
@@ -112,24 +62,10 @@ sudo apt install ubuntustudio-installer &&
 #Install MS Fonts
 sudo apt install -y ttf-mscorefonts-installer &&
 
-#Install Spotify
-curl -sS https://download.spotify.com/debian/pubkey.gpg | sudo apt-key add - &&
-echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
-sudo apt-get update && sudo apt-get install -y spotify-client &&
-
 #Install Lutris
 sudo add-apt-repository ppa:lutris-team/lutris &&
 sudo apt update &&
 sudo apt install lutris &&
-
-#Install Steam
-flatpak install flathub com.valvesoftware.Steam &&
-
-#Install vlc
-sudo apt install vlc &&
-
-#Install youtube-dl
-sudo snap install youtube-dl &&
 
 #Uncomment below to install Zorin OS theming
 #echo "Installing Zorin OS theming, you will need to install the following gnome shell extensions:
