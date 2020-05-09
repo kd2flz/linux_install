@@ -32,37 +32,37 @@ flatpak install flathub de.haeckerfelix.Shortwave &&
 flatpak install im.riot.Riot &&
 
 #Install Planner
-flatpak install flathub com.github.alainm23.planner &&
+flatpak install -y flathub com.github.alainm23.planner &&
 
 #Install Feeds
-flatpak install flathub org.gabmus.gfeeds &&
+flatpak install -y flathub org.gabmus.gfeeds &&
 
 #Install Gnome Podcasts
-flatpak install org.gnome.Podcasts &&
+flatpak install -y org.gnome.Podcasts &&
 
 #Install Geary
-flatpak install org.gnome.Geary &&
+flatpak install -y org.gnome.Geary &&
 
 #Install Lollypop
-flatpak install org.gnome.Lollypop &&
+flatpak install -y org.gnome.Lollypop &&
 
 #Install Keepassxc
-flatpak install org.keepassxc.KeePassXC &&
+flatpak install -y org.keepassxc.KeePassXC &&
 
 #Install Darktable
-flatpak install org.darktable.Darktable &&
+flatpak install -y org.darktable.Darktable &&
 
 #Install Krita
-flatpak install org.kde.krita &&
+flatpak install -y org.kde.krita &&
 
 #Install Syncthing-GTK
-flatpak install me.kozec.syncthingtk &&
+flatpak install -y me.kozec.syncthingtk &&
 
 #Install Spotify
-flatpak install com.spotify.Client
+flatpak install -y com.spotify.Client
 
 #Install Steam
-flatpak install flathub com.valvesoftware.Steam &&
+flatpak install -y flathub com.valvesoftware.Steam &&
 
 #Install VLC
-flatpak install org.videolan.VLC
+flatpak install -y org.videolan.VLC
