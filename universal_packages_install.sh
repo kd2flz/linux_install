@@ -26,10 +26,10 @@ sudo snap install htop
 sudo snap install youtube-dl
 
 #Install Shortwave
-flatpak install flathub de.haeckerfelix.Shortwave &&
+flatpak install -y flathub de.haeckerfelix.Shortwave &&
 
 #Install Riot
-flatpak install im.riot.Riot &&
+flatpak install -y im.riot.Riot &&
 
 #Install Planner
 flatpak install -y flathub com.github.alainm23.planner &&
