@@ -37,6 +37,9 @@ flatpak install -y flathub com.github.alainm23.planner &&
 #Install Feeds
 flatpak install -y flathub org.gabmus.gfeeds &&
 
+#Install Openshot
+flatpak install -y org.openshot.OpenShot &&
+
 #Install Gnome Podcasts
 flatpak install -y org.gnome.Podcasts &&
 
@@ -65,4 +68,7 @@ flatpak install -y com.spotify.Client
 flatpak install -y flathub com.valvesoftware.Steam &&
 
 #Install VLC
-flatpak install -y org.videolan.VLC
+flatpak install -y org.videolan.VLC &&
+
+#Install Audacity
+flatpak install -y org.audacityteam.Audacity
