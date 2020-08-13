@@ -17,8 +17,14 @@ sudo apt install snapd &&
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo &&
 
 #Install git
-sudo apt install git &&
+sudo apt install -y git &&
 
+#Install libdvdcss
+sudo apt install -y libdvd-pkg &&
+sudo dpkg-reconfigure libdvd-pkg &&
+
+#Install Sushi
+sudo apt install gnome-sushi &&
 
 #Install Syncthing
 	# Add the release PGP keys:
