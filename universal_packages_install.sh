@@ -25,6 +25,9 @@ sudo snap install htop
 #Install youtube-dl
 sudo snap install youtube-dl
 
+#Install Eclipse Java IDE
+flatpak install -y flathub org.eclipse.Java
+
 #Install Shortwave
 flatpak install -y flathub de.haeckerfelix.Shortwave &&
 
@@ -43,8 +46,8 @@ flatpak install -y org.openshot.OpenShot &&
 #Install Gnome Podcasts
 flatpak install -y org.gnome.Podcasts &&
 
-#Install Geary
-flatpak install -y org.gnome.Geary &&
+#Install Evolution
+flatpak install -y flathub org.gnome.Evolution
 
 #Install Lollypop
 flatpak install -y org.gnome.Lollypop &&
