@@ -25,6 +25,9 @@ sudo snap install htop
 #Install youtube-dl
 sudo snap install youtube-dl
 
+#Install todoist
+sudo snap install todoist
+
 #Install Eclipse Java IDE
 flatpak install -y flathub org.eclipse.Java
 
