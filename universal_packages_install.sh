@@ -28,6 +28,11 @@ sudo snap install youtube-dl
 #Install todoist
 sudo snap install todoist
 
+#Install Keepassxc
+sudo snap install keepassxc
+chmod +x keepassxc-snap-helper.sh
+sudo ./keepassxc-snap-helper.sh
+
 #Install Eclipse Java IDE
 flatpak install -y flathub org.eclipse.Java
 
@@ -54,9 +59,6 @@ flatpak install -y flathub org.gnome.Evolution
 
 #Install Lollypop
 flatpak install -y org.gnome.Lollypop &&
-
-#Install Keepassxc
-flatpak install -y org.keepassxc.KeePassXC &&
 
 #Install Darktable
 flatpak install -y org.darktable.Darktable &&
