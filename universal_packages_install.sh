@@ -54,6 +54,9 @@ flatpak install -y flathub com.github.alainm23.planner &&
 #Install Feeds
 flatpak install -y flathub org.gabmus.gfeeds &&
 
+#Install Pitivi (video editor)
+flatpak install -y org.pitivi.Pitivi &&
+
 #Install Gnome Podcasts
 flatpak install -y org.gnome.Podcasts &&
 
