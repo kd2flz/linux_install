@@ -19,6 +19,9 @@ sudo snap install powershell --classic &&
 #Install Visual Studio Code
 sudo snap install code --classic &&
 
+#Install todoist
+sudo snap install todoist &&
+
 #Install htop
 sudo snap install htop
 
@@ -34,13 +37,16 @@ chmod +x keepassxc-snap-helper.sh
 sudo ./keepassxc-snap-helper.sh
 
 #Install Eclipse Java IDE
-flatpak install -y flathub org.eclipse.Java
+flatpak install -y flathub org.eclipse.Java &&
 
 #Install Shortwave
 flatpak install -y flathub de.haeckerfelix.Shortwave &&
 
-#Install Riot
+#Install Element
 flatpak install -y im.riot.Riot &&
+
+#Install Openshot
+flatpak install -y org.openshot.OpenShot &&
 
 #Install Planner
 flatpak install -y flathub com.github.alainm23.planner &&
@@ -48,14 +54,11 @@ flatpak install -y flathub com.github.alainm23.planner &&
 #Install Feeds
 flatpak install -y flathub org.gabmus.gfeeds &&
 
-#Install Openshot
-flatpak install -y org.openshot.OpenShot &&
-
 #Install Gnome Podcasts
 flatpak install -y org.gnome.Podcasts &&
 
 #Install Evolution
-flatpak install -y flathub org.gnome.Evolution
+flatpak install -y flathub org.gnome.Evolution &&
 
 #Install Lollypop
 flatpak install -y org.gnome.Lollypop &&
