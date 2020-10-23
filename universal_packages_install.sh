@@ -36,8 +36,11 @@ sudo snap install keepassxc
 chmod +x keepassxc-snap-helper.sh
 sudo ./keepassxc-snap-helper.sh
 
-#Install Eclipse Java IDE
-flatpak install -y flathub org.eclipse.Java &&
+#Install Gnome Clocks
+flatpak install -y org.gnome.clocks &&
+
+#Install Blender
+flatpak install -y org.blender.Blender &&
 
 #Install Shortwave
 flatpak install -y flathub de.haeckerfelix.Shortwave &&
