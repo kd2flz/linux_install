@@ -23,8 +23,6 @@ sudo apt install -y git &&
 sudo apt install -y libdvd-pkg &&
 sudo dpkg-reconfigure libdvd-pkg &&
 
-#Install Handbrake
-sudo apt install -y handbrake
 #Install Sushi
 sudo apt install gnome-sushi &&
 
@@ -40,12 +38,6 @@ sudo apt install gnome-sushi &&
 #Install Gnome Tweaks
 sudo apt-get install chrome-gnome-shell &&
 sudo apt install gnome-tweaks &&
-#Install Emby
-wget https://github.com/MediaBrowser/Emby.Releases/releases/download/4.2.1.0/emby-server-deb_4.2.1.0_amd64.deb &&
-sudo dpkg -i emby-server-deb_4.2.1.0_amd64.deb &&
-
-#Install Plex
-snap install plexmediaserver &&
 
 #Install Joplin
 wget -O - https://raw.githubusercontent.com/laurent22/joplin/master/Joplin_install_and_update.sh | bash &&
